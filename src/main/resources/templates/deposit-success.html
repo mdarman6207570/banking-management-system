@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Deposit Result</title>
+
+  
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container">
+
+    <h2 class="info">Deposit Status</h2>
+
+    <p th:if="${accountNumber == null}" class="error-text">
+        No deposit information found.
+    </p>
+
+    <div th:if="${accountNumber != null}">
+
+        <p>
+            <span class="label">Account Number:</span>
+            <b th:text="${accountNumber}"></b>
+        </p>
+
+        <p>
+            <span class="label">Amount Deposited:</span>
+            ₹<b th:text="${amount}"></b>
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

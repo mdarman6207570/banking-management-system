@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Account Balance</title>
+
+   
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container">
+
+    <h2 class="info">Account Balance</h2>
+
+    <p>
+        <span class="label">Account Number:</span>
+        <b th:text="${account.accountNumber}"></b>
+    </p>
+
+    <p>
+        <span class="label">Available Balance:</span>
+        ₹<b th:text="${account.balance}"></b>
+    </p>
+
+</div>
+
+</body>
+</html>

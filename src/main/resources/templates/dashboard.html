@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container text-center">
+
+    <h2 class="success">
+        Welcome <span th:text="${customer.name}"></span> 🎉
+    </h2>
+
+    <p class="sub-text">Login successful</p>
+
+    <!-- Dashboard Actions -->
+    <div class="action-box">
+        <a href="/account/deposit" class="link-btn">Deposit</a>
+        <a href="/account/withdraw" class="link-btn">Withdraw</a>
+        <a href="/account/balance" class="link-btn">Check Balance</a>
+    </div>
+
+</div>
+
+</body>
+</html>

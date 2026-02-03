@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Account</title>
+
+   
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container">
+
+    <h2 class="info">Create Bank Account</h2>
+
+    <form th:action="@{/account/create}" th:object="${account}" method="post">
+
+        <div class="form-group">
+            <label>Account Type</label>
+            <select th:field="*{accountType}">
+                <option value="SAVINGS">Savings</option>
+                <option value="CURRENT">Current</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn-primary">Create Account</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

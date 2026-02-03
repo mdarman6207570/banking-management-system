@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Withdrawal Successful</title>
+
+   
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container text-center">
+
+    <h2 class="success">Withdrawal Successful</h2>
+
+    <p>
+        <span class="label">Account Number:</span>
+        <b th:text="${accountNumber}"></b>
+    </p>
+
+    <p>
+        <span class="label">Amount Withdrawn:</span>
+        ₹<b th:text="${amount}"></b>
+    </p>
+
+    <a href="/account/balance" class="link-btn">Check Balance</a>
+
+</div>
+
+</body>
+</html>

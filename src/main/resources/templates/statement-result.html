@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Statement</title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container">
+
+    <h2 class="info text-center">Transaction History</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Balance After</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each="t : ${transactions}">
+                <td th:text="${t.txnTime}"></td>
+                <td th:text="${t.txnType}"></td>
+                <td>₹<span th:text="${t.amount}"></span></td>
+                <td>₹<span th:text="${t.balanceAfter}"></span></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>

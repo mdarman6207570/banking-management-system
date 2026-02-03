@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Mini Statement</title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container">
+
+    <h2 class="info text-center">Mini Statement</h2>
+
+    <form action="/account/statement" method="post">
+
+        <div class="form-group">
+            <label>Account Number</label>
+            <input type="text" name="accountNumber" required />
+        </div>
+
+        <button type="submit" class="btn-primary">View Statement</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
